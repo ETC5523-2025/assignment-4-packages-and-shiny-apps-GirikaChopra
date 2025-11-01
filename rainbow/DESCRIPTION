@@ -1,11 +1,12 @@
 Package: rainbow
-Title: What the Package Does (One Line, Title Case)
+Title: Interactive Explorer for River Nitrate & Water-Quality (Synthetic)
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+   person("Girika","Girika", email = "girikachopra2610@icloud.com", role = c("aut","cre"))
+Description: An R package that ships a small synthetic river water-quality dataset 
+    (replicated from published graphics) and a Shiny app to explore nitrate patterns 
+    by site and covariates such as temperature, dissolved oxygen, conductance, turbidity, and elevation.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
