@@ -1,17 +1,28 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 # rainbow
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of rainbow is to …
+The goal of rainbow is to ...
 
 ## Installation
 
-You can install the development version of rainbow from
-[GitHub](https://github.com/) with:
+You can install the development version of rainbow from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("rainbow")
@@ -22,16 +33,17 @@ pak::pak("ETC5523-2025/assignment-4-packages-and-shiny-apps-GirikaChopra")
 
 This is a basic example which shows you how to solve a common problem:
 
-``` r
-library(dplyr); library(usethis)
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
+```{r}
+devtools::load_all()           
+df <- rainbow::rivers_data     
+library(ggplot2)
+library(dplyr)
+library(usethis)
+```
+
+
+```{r example}
+
 
 set.seed(2626)
 
@@ -67,38 +79,29 @@ rivers_data <- purrr::pmap_dfr(
     )
   }
 )
+
 ```
 
-``` r
+```{r}
 rivers_data$Site <- factor(rivers_data$Site, levels = sites)
 
 usethis::use_data(rivers_data, overwrite = TRUE) 
-#> ✔ Setting active project to
-#>   "/Users/girika/Desktop/5523/assignment/A4/assignment-4-packages-and-shiny-apps-GirikaChopra/rainbow".
-#> ✔ Saving "rivers_data" to "data/rivers_data.rda".
-#> ☐ Document your data (see <https://r-pkgs.org/data.html>).
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
 
 You can also embed plots, for example:
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+```{r , echo = FALSE}
+p_box <- ggplot(df, aes(Site, Nitrate, fill = Site)) +
+  geom_boxplot(outlier.alpha = 0.2) +
+  labs(x = NULL, y = "Nitrate (µmol/L)", title = "Nitrate by Site") +
+  theme_minimal()
+p_box
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+```
+
+
