@@ -21,4 +21,6 @@ Imports:
     purrr,
     bslib
 Suggests:
+    knitr,
     rmarkdown
+VignetteBuilder: knitr
