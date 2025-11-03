@@ -22,6 +22,7 @@ my_first_function <- function() {
 #' @importFrom ggplot2 ggplot aes geom_boxplot labs theme_minimal
 #'
 my_first_plot <- function() {
+  df <- rivers_data
   p_box <- ggplot2::ggplot(df, ggplot2::aes(Site, Nitrate, fill = Site)) +
   ggplot2::geom_boxplot(outlier.alpha = 0.2) +
   ggplot2::labs(x = NULL, y = "Nitrate (µmol/L)", title = "Nitrate by Site") +

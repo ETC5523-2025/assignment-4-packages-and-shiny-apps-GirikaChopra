@@ -17,3 +17,65 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(rainbow)
 ```
+
+## The `rivers_data` dataset
+
+The dataset `rivers_data` contains measurements from three synthetic
+stream sites: **Arikaree River**, **Caribou Creek**, and **Lewis Run**.
+For each sampling event, the data record:
+
+- **Site** – which stream the sample comes from  
+- **Nitrate** – nitrate concentration in µmol/L  
+- **Temperature** – water temperature in °C  
+- **Dissolved oxygen** – in mg/L  
+- **Conductance** – electrical conductance in µS/cm  
+- **Turbidity** – a measure of water clarity (FNU)  
+- **Elevation** – site elevation in metres  
+
+Although the data are synthetic, they are based on patterns seen in real
+studies and are intended for exploring basic data-visualisation and app
+development ideas.
+
+**DESCRIBING THE FUNCTION**
+
+## The `my_first_plot()` function
+
+The main example function in the package is `my_first_plot()`.  
+It:
+
+- Uses the `rivers_data` dataset shipped with the package  
+- Produces a `ggplot2` boxplot of nitrate concentration by site  
+- Applies a clean minimal theme so the focus stays on the data
+
+Because `my_first_plot()` returns a `ggplot` object, it can be further
+customised by users in their own analysis, for example by changing the
+labels, colours, or theme.
+
+This package contains one small synthetic dataset, rivers_data, and one demo plotting function, my_first_plot(). The dataset records nitrate concentration and common water-quality covariates at three stream sites. The plot function shows a boxplot of nitrate by site. A simple Shiny app is included to interactively filter sites and view a summary.
+
+## Exploring the `rivers_data` dataset
+
+```{r}
+#We can take a quick look at the structure of the dataset.
+str(rivers_data)
+```
+
+## Exploring the `rivers_data` dataset
+
+```{r}
+print(rainbow::my_first_plot())
+```
+
+**HOW TO USE THE PACKAGE**
+
+
+A typical workflow with **rainbow** might be:
+
+1. Load the package with `library(rainbow)`.  
+2. Read the help pages for `rivers_data` and `my_first_plot()` to
+   understand the variables and the example plot.  
+3. Use `my_first_plot()` to quickly visualise nitrate differences between
+   the three sites.  
+4. Open the Shiny app with `launch_app()` to explore the data
+   interactively and show results to others.
+
