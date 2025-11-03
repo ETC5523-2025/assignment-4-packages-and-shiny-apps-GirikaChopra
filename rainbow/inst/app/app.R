@@ -64,7 +64,7 @@ server <- function(input, output, session) {
         title = "Nitrate by Site"
       ) +
       ggplot2::theme_minimal()
-  })
+})
 
   # Summary table: mean + SD by site
   output$summary_tbl <- shiny::renderTable({
