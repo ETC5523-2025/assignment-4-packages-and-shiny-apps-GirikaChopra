@@ -1,8 +1,12 @@
 
 ui <- shiny::fluidPage(
-  shiny::titlePanel("Rainbow: Nitrate Explorer"),
   shiny::sidebarLayout(
     shiny::sidebarPanel(
+      shiny::h4("Choose sites"),
+      shiny::p(
+        "Use the checkboxes below to select which river sites to include ",
+        "in the analysis. The plot and summary table will update automatically."
+      ),
       shiny::checkboxGroupInput(
         "sites", "Select sites:",
         choices = unique(rainbow::rivers_data$Site),
