@@ -61,7 +61,7 @@ server <- function(input, output, session) {
       ggplot2::scale_fill_manual(
         values = c(
           "Arikaree River" = "pink",
-          "Caribou Creek"  = "pink4",
+          "Caribou Creek"  = "skyblue3",
           "Lewis Run"      = "red3"
         )
       ) +
