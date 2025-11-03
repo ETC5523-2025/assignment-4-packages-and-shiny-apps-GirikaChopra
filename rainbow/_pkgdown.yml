@@ -1,0 +1,18 @@
+url: https://github.com/ETC5523-2025/assignment-4-packages-and-shiny-apps-GirikaChopra/tree/main/rainbow
+title: "rainbow: Nitrate Explorer"
+template:
+  bootstrap: 5
+
+home:
+  title: "Rainbow: exploring river nitrate"
+  description: >
+    The rainbow package provides a synthetic river water-quality dataset,
+    a demo plotting function showing nitrate by site, and an interactive
+    Shiny app to explore nitrate concentrations and summary statistics.
+
+
+
+
+
+
+
