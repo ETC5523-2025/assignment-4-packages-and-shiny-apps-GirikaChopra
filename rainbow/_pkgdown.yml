@@ -10,7 +10,10 @@ home:
     a demo plotting function showing nitrate by site, and an interactive
     Shiny app to explore nitrate concentrations and summary statistics.
 
-
+navbar:
+  structure:
+    left: [reference, articles]
+    right: [github]
 
 
 
