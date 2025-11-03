@@ -57,14 +57,22 @@ server <- function(input, output, session) {
 
   output$nitrate_plot <- shiny::renderPlot({
     ggplot2::ggplot(filtered(), ggplot2::aes(Site, Nitrate, fill = Site)) +
-      ggplot2::geom_boxplot(outlier.alpha = 0.2) +
+      ggplot2::geom_boxplot(outlier.alpha = 0.2, colour = "black") +
+      ggplot2::scale_fill_manual(
+        values = c(
+          "Arikaree River" = "pink",
+          "Caribou Creek"  = "pink4",
+          "Lewis Run"      = "red3"
+        )
+      ) +
       ggplot2::labs(
         x = NULL,
         y = "Nitrate (µmol/L)",
         title = "Nitrate by Site"
       ) +
       ggplot2::theme_minimal()
-})
+  })
+
 
   # Summary table: mean + SD by site
   output$summary_tbl <- shiny::renderTable({
