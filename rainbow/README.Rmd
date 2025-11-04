@@ -103,4 +103,11 @@ p_box
 
 ```
 
+## Pkgdown Site
+
+<https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-GirikaChopra/>
+
+## AI chat
+
+<https://chatgpt.com/share/6909a315-66c8-8011-bd4d-86e3a812f37e>
 

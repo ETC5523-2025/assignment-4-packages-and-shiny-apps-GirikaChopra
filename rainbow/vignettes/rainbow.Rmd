@@ -79,10 +79,3 @@ A typical workflow with **rainbow** might be:
 4. Open the Shiny app with `launch_app()` to explore the data
    interactively and show results to others.
 
-## Pkgdown Site
-
-<https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-GirikaChopra/>
-
-## AI chat
-
-<https://chatgpt.com/share/6909a315-66c8-8011-bd4d-86e3a812f37e>
