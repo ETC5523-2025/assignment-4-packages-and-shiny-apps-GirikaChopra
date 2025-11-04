@@ -62,7 +62,7 @@ str(rivers_data)
 
 ## Exploring the `rivers_data` dataset
 
-```{r}
+```{r , fig.alt = "Boxplot of nitrate concentration by site for three rivers"}
 print(rainbow::my_first_plot())
 ```
 
