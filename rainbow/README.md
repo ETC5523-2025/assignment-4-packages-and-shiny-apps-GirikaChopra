@@ -87,3 +87,11 @@ up-to-date. `devtools::build_readme()` is handy for this.
 You can also embed plots, for example:
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+
+## Pkgdown Site
+
+<https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-GirikaChopra/>
+
+## AI chat
+
+<https://chatgpt.com/share/6909a315-66c8-8011-bd4d-86e3a812f37e>
